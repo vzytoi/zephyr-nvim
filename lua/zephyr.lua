@@ -13,7 +13,7 @@ local zephyr = {
   base7      = '#9ca0a4';
   base8      = '#b1b1b1';
 
-  bg = '#282a36';
+  bg = '#080808';
   bg1 = '#504945';
   bg_popup = '#3E4556';
   bg_highlight  = '#2E323C';
@@ -27,6 +27,8 @@ local zephyr = {
   redwine = '#d16d9e';
   orange = '#D98E48';
   yellow = '#f0c674';
+
+  sep = '#61afef';
 
   light_green = '#abcf84';
   green = '#afd700';
@@ -74,14 +76,13 @@ function zephyr.highlight(group, color)
                              ' ' .. bg..' '..sp)
 end
 
-
 function zephyr.load_syntax()
   local syntax = {
     Normal = {fg = zephyr.fg,bg=zephyr.bg};
     Terminal = {fg = zephyr.fg,bg=zephyr.bg};
     SignColumn = {fg=zephyr.fg,bg=zephyr.bg};
     FoldColumn = {fg=zephyr.fg_alt,bg=zephyr.black};
-    VertSplit = {fg=zephyr.black,bg=zephyr.bg};
+    VertSplit = {fg=zephyr.sep,bg=zephyr.bg};
     Folded = {fg=zephyr.grey,bg=zephyr.bg_highlight};
     EndOfBuffer = {fg=zephyr.bg,bg=zephyr.none};
     IncSearch = {fg=zephyr.bg1,bg=zephyr.orange,style=zephyr.none};
